@@ -5,6 +5,7 @@ import Shop from './Components/Shop'
 import Nav from './Components/Nav'
 import Home from './Components/Home'
 import About from './Components/About'
+import Item from './Components/Item'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
           <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/About' component={About}/>
-          <Route path='/Shop' component={Shop}/>
+          <Route path='/Shop' exact component={Shop}/>
+          <Route path='/Shop/:id' component={Item}/>
           </Switch>
       </div>
    </Router>
