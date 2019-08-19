@@ -9,15 +9,19 @@ import About from './Components/About'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Route path='/Nav' component={Nav}/>
-        <Route path='/' exact component={Home}/>
-        <Route path='/About' component={About}/>
-        <Route path='/Shop' component={Shop}/>
-      </Router>
-    </div>
+   <Router>
+      <div className="App">
+          <Nav />
+          <Switch>
+          <Route path='/' exact component={Home}/>
+          <Route path='/About' component={About}/>
+          <Route path='/Shop' component={Shop}/>
+          </Switch>
+      </div>
+   </Router>
   );
 }
 
 export default App;
+// 7299d8feb2f5eadccc6c8b0efadeddd9
+// https://fortnite-api.theapinetwork.com/upcoming/get/header:%20%7B'Authorization':'7299d8feb2f5eadccc6c8b0efadeddd9'%7D
