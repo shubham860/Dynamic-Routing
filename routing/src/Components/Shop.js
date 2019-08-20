@@ -27,7 +27,6 @@ class Shop extends React.Component {
       }
   render () {
     const {items} = this.state
-     console.log(items.itemId)
      return(
        <div class='container'>
         <div class='row'>
