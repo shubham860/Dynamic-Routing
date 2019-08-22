@@ -9,6 +9,10 @@ nav {
   min-height: 10vh;
   background-color: rgb(73,79,82);
   color : white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10 !important;
 }
 
 .nav-links{
@@ -16,11 +20,18 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  list-style: none;
+  list-style: none
 }
 
 .link{
   color: white;
   text-decoration: none !important;
   outline: 0;
+}
+
+@media (max-width : 720px){
+.res{
+    height : 400px;
+    width : 380px;
+}
 }

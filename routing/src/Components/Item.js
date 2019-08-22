@@ -7,20 +7,18 @@ class Item extends React.Component {
   constructor({match}){
     super()
     this.state = {
-      item : [],
+      item : {data : {item: {images : {},ratings:{}}}},
       id : match.params.id
     }
-    console.log(this.state.id)
  }
 
   componentDidMount(){
     axios
-      .get(`https://fortnite-api.theapinetwork.com/item/get`,{params:{'id':`${this.state.id}`}}/{headers : {'Authorization':'7299d8feb2f5eadccc6c8b0efadeddd9'}})
+      .get(`https://fortnite-api.theapinetwork.com/item/get?id=${this.state.id}`,{headers : {'Authorization':'7299d8feb2f5eadccc6c8b0efadeddd9'}})
       .then(response =>{
           this.setState({
-            item : response.data.data
+            item : response.data,
           })
-          // console.log(item.data[0].item.name)
       })
       .catch(error => {
           alert(error)
@@ -30,10 +28,14 @@ class Item extends React.Component {
 
   render () {
     const {item} = this.state
+
+    console.log()
+    console.log(item)
      return(
        <div class='container'>
-        <div class='row'>
-
+        <div class='row'><br/><br/>
+           <img src={item.data.item.images.icon} class='res' />
+           <h3>{item.data.item.name}</h3>
         </div>
        </div>
      )

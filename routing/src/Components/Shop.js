@@ -42,7 +42,7 @@ class Shop extends React.Component {
                 items.map(name=>
                 <tr key={name.itemId}>
                 <td>{name.item.name}</td>
-                <td><Link to={`/Shop/${name.itemId}`} class="waves-effect waves-light btn-small">Go</Link></td>
+                <td><Link to={`/Shop/${name.itemId}`} class="waves-effect waves-light btn-small ">Go</Link></td>
                 </tr>
                  )
             }
