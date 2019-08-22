@@ -8,7 +8,7 @@ class Nav extends React.Component {
        <nav>
          <h3>Logo</h3>
          <ul class='nav-links'>
-          <Link to='/Home' class='link'>
+          <Link to='/' class='link'>
            <li >Home</li>
           </Link>
           <Link to='/About'  class='link'>
