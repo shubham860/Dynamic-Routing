@@ -9,13 +9,13 @@ class Nav extends React.Component {
          <h5>ReactJS Practise</h5>
          <ul class='nav-links'>
           <Link to='/' class='link'>
-           <li >Home</li>
+           <li><h6>Home</h6></li>
           </Link>
           <Link to='/About'  class='link'>
-           <li>About</li>
+           <li><h6>About</h6></li>
           </Link>
           <Link to='/Shop'  class='link'>
-           <li>Shop</li>
+           <li><h6>Shop</h6></li>
           </Link>
          </ul>
        </nav>
